@@ -67,7 +67,6 @@ class App{
         if(a instanceof Array){
             for(let i = 0; i < a.length; i++){
                 let curB = MathE.getBValue(y0,x0,a[i],Affinity.alphabet.length ** 2)
-                console.log(`Key: ${a[i]} - ${curB}`)
                 bs.push(curB)
             }
         }
@@ -86,6 +85,7 @@ class App{
                     openBiGram.push(Affinity.decryptBigram(a[x],bs[x],transpiledBiGram[i],Affinity.alphabet.length ** 2))
                 }
                 
+                console.log(`Key: ${a[x]} - ${bs[x]}`)
 
                 let openText = []
                 for(let i = 0; i < openBiGram.length; i++){
